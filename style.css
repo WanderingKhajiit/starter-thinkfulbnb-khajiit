@@ -154,7 +154,7 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 600px){
+@media all and (min-width: 480px){
   header {
     flex-flow: row wrap;
     justify-content: space-between;
