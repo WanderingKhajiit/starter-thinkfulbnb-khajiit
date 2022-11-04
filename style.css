@@ -1,7 +1,6 @@
-/* -------  General Styles ------- */
-
 body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -21,47 +20,54 @@ p {
   margin: 0;
 }
 
-section {
-  padding: 20px;
-}
-
-section.alternate-background {
-  background-color: #00a699;
-  color: #fff;
-}
-
-main img {
-  width: 100px;
-}
-
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.item-btn {
+  flex: 0 0 100%;
 }
 
 .item {
   flex: 1;
-  margin: 10px;
 }
 
 .item-double {
   flex: 2;
 }
 
-/* -------  Navigation ------- */
+.item,
+.item-double {
+  margin: 10px;
+}
 
+/* -------  Navigation ------- */
 header {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 2rem;
   color: #fff;
+}
+
+header nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 header nav ul li {
@@ -77,12 +83,43 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section img {
+  max-width: 100%;
+}
+
+section.alternate-background {
+  background-color: #00a699;
+  color: #fff;
 }
 
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+}
+
+form.group {
+  width: 90%;
+  margin: 0 20px 20px 20px;
+}
+
+form > .group {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+form > .item {
+  width: 100%;
 }
 
 form label {
@@ -117,3 +154,55 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px){
+  header {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main > section {
+    flex-flow: row wrap;
+}
+
+h2 {
+    flex: 0 0 100%;
+}
+
+h3 {
+    padding: 0;
+}
+
+.group {
+    flex-flow: row wrap;
+}
+
+form > .group {
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+input.item,
+input.item-double,
+select.item,
+select.item-double {
+    margin: 0 10px 10px 10px;
+}
+
+form > .group label {
+    margin: 10px 10px 0 10px;
+}
+
+.item {
+    flex: 1 1;
+}
+
+.item-btn {
+    flex: 1 1;
+}
+
+.item-double {
+    flex: 2 2;
+}
+}
