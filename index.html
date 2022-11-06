@@ -35,68 +35,39 @@
       <section id="stay">
         <h2>Find the perfect vacation rental</h2>
         <!-- Create a form here -->
-        <form class="group">
-          <div class="item group">
-          <label for="location">Location</label>
-          
-          <input
-            name="destination"
-
-            id="location"
-        
-            type="text"
-
-            required
-            placeholder="Search destination"
-          /></div>
-          <div class="item group">
-          <label for="date">Arrive</label>
-          
+        <form>
+          <div>
+            <label for="location">Location</label>
             <input
-              name="date"
-
-              id="date"
-              
-              type="date"
-
+              id="location"
+              type="text"
+              placeholder="Search destination"
               required
-              
-            /></div>
-            <div class="item group">
-          <label for="date">Depart</label>
-          
-            <input
-              name="date"
-
-              id="date"
-              
-              type="date"
-
-              required
-              
-            /></div>
-              <div class="item group">
-          <label class="item" for="type">Type</label>
-            <select class="item-double" id="type">
+            />
+          </div>
+          <div>
+            <label for="arrive">Arrive</label>
+            <input id="arrive" type="date" name="arrive" min="2021-05-09" />
+          </div>
+          <div>
+            <label for="depart">Depart</label>
+            <input id="depart" type="date" name="depart" min="2021-05-09" />
+          </div>
+          <div>
+            <p class="select">Type</p>
+            <select name="building" size="1">
               <option value="apartment">Apartment</option>
-              
               <option value="barn">Barn</option>
-              
               <option value="castle">Castle</option>
-              
               <option value="houseboat">Houseboat</option>
-              
-              <option value="tiny house">Tiny House</option>
-              
+              <option value="tiny-house">Tiny House</option>
               <option value="yacht">Yacht</option>
-              
               <option value="yurt">Yurt</option>
             </select>
           </div>
-          <div class="item">
-            <button class="butt" type="search">Search</button>
+          <div>
+            <button type="submit">Search</button>
           </div>
-            
         </form>
       </section>
 

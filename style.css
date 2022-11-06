@@ -24,13 +24,15 @@ p {
 
 .group {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   align-items: center;
   justify-content: space-evenly;
 }
 
 .item-btn {
   flex: 0 0 100%;
+  margin: 10px;
+  
 }
 
 .item {
@@ -87,11 +89,9 @@ header nav ul li a:hover {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
 }
+
 
 section img {
   max-width: 100%;
@@ -131,7 +131,12 @@ form input {
   margin-bottom: 20px;
   width: 180px;
 }
-
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
 form button {
   background-color: #ff385c;
   border: none;
@@ -160,6 +165,22 @@ footer p {
     justify-content: space-between;
     align-items: center;
 }
+form button {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+#stay div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 5px;
+}
+#stay form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0px 10px;
+}
 
 main > section {
     flex-flow: row wrap;
@@ -175,12 +196,13 @@ h3 {
 
 .group {
     flex-flow: row wrap;
+    
 }
 
 form > .group {
     flex-flow: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start;   
 }
 
 input.item,
@@ -197,9 +219,14 @@ form > .group label {
 .item {
     flex: 1 1;
 }
-
+.item,
+.group{
+  padding: 20px 0
+}
 .item-btn {
-    flex: 1 1;
+    flex: .1 1; 
+    padding: 10px 20px;
+  font-size: 20px;
 }
 
 .item-double {
